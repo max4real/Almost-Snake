@@ -1,4 +1,5 @@
-import 'package:almost_snake/snake/v_snake.dart';
+import 'package:almost_snake/dvd/dvd.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -11,6 +12,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(home: SnakePage());
+    return GetMaterialApp(
+      // home: SnakePage(),
+      // home: ExplicitAnimationExample(),
+      home: DVDPage(),
+    );
   }
 }

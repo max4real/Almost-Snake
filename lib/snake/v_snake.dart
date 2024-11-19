@@ -39,8 +39,9 @@ class SnakePage extends StatelessWidget {
                             width: itemWidth,
                             height: itemWidth,
                             decoration: BoxDecoration(
-                                color: primary,
-                                borderRadius: BorderRadius.circular(20)),
+                              color: primary,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         );
                       },
@@ -56,18 +57,18 @@ class SnakePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      InkWell( 
-                        borderRadius: BorderRadius.circular(35),
+                      GestureDetector(
+                        // borderRadius: BorderRadius.circular(35),
                         onTap: () {
                           controller.onTapTopLeft();
                         },
-                        onLongPress: () {
-                          controller.onTapTopLeft();
+                        onLongPressStart: (details) {
+                          controller.startContinuousTap();
                         },
-                        onTapCancel: () {
-                          print("cancel");
-                        }, 
-                        child: Container( 
+                        onLongPressEnd: (details) {
+                          controller.stopContinuousTap();
+                        },
+                        child: Container(
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
@@ -241,6 +242,12 @@ class SnakePage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  ElevatedButton(
+                    onPressed: () {
+                      controller.onTapTopLeft();
+                    },
+                    child: Text("start"),
+                  ),
                 ],
               ),
             )
@@ -258,7 +265,7 @@ class SnakePage extends StatelessWidget {
     return AnimatedPositioned(
       top: top,
       left: left,
-      curve: Curves.bounceOut,
+      curve: Curves.linear,
       duration: const Duration(milliseconds: 200),
       child: child,
     );
