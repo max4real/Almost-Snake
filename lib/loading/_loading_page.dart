@@ -1,3 +1,5 @@
+import 'package:almost_snake/loading/pulsating_circle.dart';
+import 'package:almost_snake/loading/rotating_box.dart';
 import 'package:almost_snake/loading/bounce_loading.dart';
 import 'package:almost_snake/loading/square_loading.dart';
 import 'package:almost_snake/loading/twist_loading.dart';
@@ -38,6 +40,18 @@ class _LoadingPagesState extends State<LoadingPages> {
               Get.to(() => const TwistLoading());
             },
             child: Text("Twist Loading"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(() => const RotatingBox());
+            },
+            child: Text("Rotating Box"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(() => const PulsatingCircle());
+            },
+            child: Text("Pulsating Circle"),
           ),
         ],
       ),

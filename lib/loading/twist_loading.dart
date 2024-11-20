@@ -27,7 +27,9 @@ class _TwistLoadingState extends State<TwistLoading>
     _rotationAnimation = CurvedAnimation(
       parent: _controller,
       curve: Curves.elasticInOut,
-    ).drive(Tween<double>(begin: 0, end: 2 * pi));
+    ).drive(
+      Tween<double>(begin: 0, end: 2 * pi),
+    );
   }
 
   @override
