@@ -1,5 +1,3 @@
-import 'package:almost_snake/dvd/dvd.dart';
-import 'package:almost_snake/loading/_loading_page.dart';
 import 'package:almost_snake/snake/c_snake.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -245,18 +243,18 @@ class SnakePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Get.to(() => const DVDPage());
-                      },
-                      child: Text("DVD"),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Get.to(() => const LoadingPages());
-                      },
-                      child: Text("Loading"),
-                    ),
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     Get.to(() => const DVDPage());
+                    //   },
+                    //   child: Text("DVD"),
+                    // ),
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     Get.to(() => const LoadingPages());
+                    //   },
+                    //   child: Text("Loading"),
+                    // ),
                   ],
                 ),
               ),
