@@ -13,7 +13,7 @@ class SnakePage extends StatelessWidget {
     Color background = const Color(0xFF1E1E1E);
     Color background2 = const Color(0xFF282828);
 
-    return Scaffold(
+    return Scaffold( 
       body: SafeArea(
         child: Column(
           children: [
